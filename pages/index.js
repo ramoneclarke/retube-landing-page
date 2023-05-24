@@ -24,33 +24,45 @@ export async function getStaticProps() {
     }`);
     const unsortedFeatures = await client.fetch(`*[_type == "feature"]`);
     const features = unsortedFeatures.sort((a, b) => a.order - b.order);
+    const pricing = await client.fetch(`*[_type == "pricing"] {
+      ...,
+      billing_types[]->{
+        ...,
+        plans[]->{
+          ...,
+          billing_label->        
+        }
+      },
+    }`);
 
     return {
       props: {
         hero,
         features,
+        pricing,
       },
     };
   } catch (error) {
-    console.error("Error fetching hero data:", error);
+    console.error("Error fetching data:", error);
     return {
       props: {
         hero: null,
         features: null,
-        error: "Failed to fetch hero data",
+        pricing: null,
+        error: "Failed to fetch data",
       },
     };
   }
 }
 
-export default function Home({ hero, features }) {
-  console.log(features);
+export default function Home({ hero, features, pricing }) {
+  console.log(pricing);
   return (
     <main className={`flex bg-lighter min-h-screen flex-col items-center`}>
       <Header />
       <Hero data={hero} />
       <FeaturesSection data={features} />
-      <PricingSection />
+      <PricingSection data={pricing} />
       <Footer />
     </main>
   );
