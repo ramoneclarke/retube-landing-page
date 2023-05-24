@@ -18,6 +18,11 @@ const feature = {
       name: "image",
       type: "image",
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+    },
   ],
 };
 

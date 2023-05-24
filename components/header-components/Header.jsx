@@ -5,11 +5,22 @@ import Logo from "./Logo";
 const Header = () => {
   const router = useRouter();
 
+  const handleClickScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="w-4/5 h-20 mb-20 justify-between flex items-center">
       <Logo />
       <div className="flex gap-12 flex-1 pl-24">
-        <button className="text-gray-500 font-medium hover:text-mid">
+        <button
+          onClick={() => handleClickScroll("features")}
+          className="text-gray-500 font-medium hover:text-mid"
+        >
           Features
         </button>
         <button className="text-gray-500 font-medium hover:text-mid">
