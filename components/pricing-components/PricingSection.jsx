@@ -5,10 +5,11 @@ import SubscriptionPlans from "./SubscriptionPlans";
 const PricingSection = ({ data }) => {
   const [selectedBillingType, setSelectedBillingType] = useState("monthly");
 
-  const handleBillingTypeChange = () => {};
-
   return (
-    <div className="w-full bg-slate-200 flex items-center flex-col gap-6 pt-28 pb-28">
+    <div
+      id="pricing"
+      className="w-full bg-slate-200 flex items-center flex-col gap-6 pt-20 pb-28"
+    >
       <div className="flex w-full flex-col items-center gap-12 text-darkest dark:text-lightest">
         <h1 className="text-center font-semibold text-6xl">
           {data[0].heading}

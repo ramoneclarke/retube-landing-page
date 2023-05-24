@@ -23,7 +23,10 @@ const Header = () => {
         >
           Features
         </button>
-        <button className="text-gray-500 font-medium hover:text-mid">
+        <button
+          onClick={() => handleClickScroll("pricing")}
+          className="text-gray-500 font-medium hover:text-mid"
+        >
           Pricing
         </button>
       </div>
