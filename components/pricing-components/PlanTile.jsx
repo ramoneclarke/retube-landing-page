@@ -20,8 +20,10 @@ const PlanTile = ({
   const router = useRouter();
 
   return (
-    <div className="flex min-h-[30rem] w-full flex-col rounded-2xl bg-lighter p-8 text-darkest shadow-lg dark:bg-darker dark:text-lightest md:w-1/3">
-      <h2 className="text-3xl font-medium md:h-16">{planName}</h2>
+    <div className="flex gap-2 md:gap-0 min-h-[30rem] w-full flex-col rounded-2xl bg-lighter p-8 text-darkest shadow-lg dark:bg-darker dark:text-lightest md:w-1/3">
+      <h2 className="text-3xl md:text-2xl lg:text-3xl font-medium md:h-16">
+        {planName}
+      </h2>
       <p className="text-5xl font-bold md:text-4xl lg:text-5xl">
         £{price}
         <span className="text-lg font-normal">
@@ -43,34 +45,6 @@ const PlanTile = ({
         {featurePoints.map((point) => (
           <PlanBenefit text={point} key={point} />
         ))}
-        {/* <PlanBenefit text="Create and save text snippets from youtube clips" />
-        <PlanBenefit text="Generate summaries of youtube videos" />
-        <PlanBenefit
-          text="            Search though a playlist of Youtube videos (Coming soon)
-"
-        />
-        <PlanBenefit
-          text={`${snippetsMonthlyLimit} Snippets per month`}
-          bold={true}
-        />
-        <PlanBenefit
-          text={`            Snippet max length: ${formatDuration(
-            snippetsMaxLength
-          )}
-`}
-          bold={true}
-        />
-        <PlanBenefit
-          text={`            ${summariesMonthlyLimit} Summaries per month
-`}
-          bold={true}
-        />
-        <PlanBenefit
-          text={`  Summaries max video length: 
-            ${formatDuration(summariesMaxVideoLength)}`}
-          bold={true}
-        />
-        <PlanBenefit text="Search Playlists: Coming soon!" /> */}
       </div>
     </div>
   );

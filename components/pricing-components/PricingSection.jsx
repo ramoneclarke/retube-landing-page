@@ -8,7 +8,7 @@ const PricingSection = ({ data }) => {
   return (
     <div
       id="pricing"
-      className="w-full bg-slate-200 flex items-center flex-col gap-6 pt-20 pb-28"
+      className="w-full bg-slate-200 flex items-center flex-col gap-6 pt-20 md:pb-18 lg:pb-28 pb-16 px-2 md:px-0"
     >
       <div className="flex w-full flex-col items-center gap-12 text-darkest dark:text-lightest">
         <h1 className="text-center font-semibold text-6xl">
@@ -23,7 +23,7 @@ const PricingSection = ({ data }) => {
           billingTypes={data[0].billing_types}
         />
       </div>
-      <div className="flex w-4/5 px-8 md:py-8">
+      <div className="flex lg:w-4/5 w-full px-8 md:py-8">
         <SubscriptionPlans
           selectedBillingType={selectedBillingType}
           planDetails={plans}

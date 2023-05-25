@@ -13,7 +13,7 @@ const PlanBenefit = ({ text, bold }) => {
     );
   }
   return (
-    <div className="flex mb-3 h-16 flex-row items-center gap-2 md:h-24 lg:h-12">
+    <div className="flex mb-1 lg:mb-3 h-16 flex-row items-center gap-2 md:h-24 lg:h-12">
       <div className="flex items-center justify-center">
         <GiCheckMark className="text-2xl text-brand" />{" "}
       </div>

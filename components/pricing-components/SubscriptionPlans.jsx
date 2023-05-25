@@ -13,7 +13,7 @@ const SubscriptionPlans = ({
 
   return (
     <div className="flex h-full w-full flex-col">
-      <div className="flex w-full flex-col gap-4 md:flex-row">
+      <div className="flex w-full flex-col md:gap-4 gap-8 md:flex-row">
         {plans.map((plan) => (
           <PlanTile
             key={plan.plan_name}

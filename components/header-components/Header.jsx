@@ -7,7 +7,7 @@ const Header = ({ handleClick, handleClickScroll }) => {
   const router = useRouter();
 
   return (
-    <div className="md:w-4/5 w-full px-4 md:px-0 h-20 md:mb-20 mb-2 justify-between flex items-center">
+    <div className="lg:w-4/5 w-full px-4 lg:px-0 md:px-6 h-20 md:mb-20 mb-2 justify-between flex items-center">
       <Logo />
       <div className="gap-12 flex-1 pl-24 hidden md:flex">
         <button
@@ -42,7 +42,7 @@ const Header = ({ handleClick, handleClickScroll }) => {
         </button>
       </div>
       <AiOutlineMenu
-        className="no-tap-highlight block cursor-pointer text-[1.8rem] text-brand lg:hidden lg:text-[2rem]"
+        className="no-tap-highlight block md:hidden cursor-pointer text-[1.8rem] text-brand lg:hidden lg:text-[2rem]"
         onClick={handleClick}
       />
     </div>

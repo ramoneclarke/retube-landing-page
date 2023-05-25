@@ -8,7 +8,10 @@ import SummariesFeature from "../../public/images/summariesfeature.png";
 
 const FeaturesSection = ({ data }) => {
   return (
-    <div id="features" className="w-4/5 flex flex-col gap-12 pb-40">
+    <div
+      id="features"
+      className="md:w-4/5 w-full px-4 md:px-0 flex flex-col gap-12 md:pb-40 pb-24"
+    >
       <FeatureRow
         heading={data[0].title}
         points={data[0].points}
