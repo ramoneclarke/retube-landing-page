@@ -7,7 +7,7 @@ const Header = ({ handleClick, handleClickScroll }) => {
   const router = useRouter();
 
   return (
-    <div className="md:w-4/5 w-full px-4 md:px-0 h-20 mb-20 justify-between flex items-center">
+    <div className="md:w-4/5 w-full px-4 md:px-0 h-20 md:mb-20 mb-2 justify-between flex items-center">
       <Logo />
       <div className="gap-12 flex-1 pl-24 hidden md:flex">
         <button

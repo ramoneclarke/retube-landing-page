@@ -44,16 +44,36 @@ const MobileSidebar = ({
       <div className=" mt-8 flex w-full flex-col items-center gap-y-4">
         <button
           onClick={() => handleClickScroll("features")}
-          className="no-tap-highlight justify-left no-tap-highlight flex h-11 w-5/6 cursor-pointer flex-row items-center gap-x-3 rounded-lg bg-lightest pl-3 no-underline shadow-sm  hover:bg-lighter font-medium dark:hover:bg-darker"
+          className="no-tap-highlight justify-left no-tap-highlight flex h-11 w-5/6 cursor-pointer flex-row items-center gap-x-3 rounded-lg bg-lighter pl-3 no-underline shadow-sm  hover:bg-lighter font-medium dark:hover:bg-darker"
         >
           Features
         </button>
         <button
           onClick={() => handleClickScroll("pricing")}
-          className="justify-left no-tap-highlight flex h-11 w-5/6 cursor-pointer flex-row items-center gap-x-3 rounded-lg bg-lightest pl-3 no-underline shadow-sm  hover:bg-lighter font-medium dark:hover:bg-darker"
+          className="justify-left no-tap-highlight flex h-11 w-5/6 cursor-pointer flex-row items-center gap-x-3 rounded-lg bg-lighter pl-3 no-underline shadow-sm  hover:bg-lighter font-medium dark:hover:bg-darker"
         >
           Pricing
         </button>
+      </div>
+      <div className="flex h-full w-full flex-1 items-end justify-center">
+        <div className="gap-2 flex p-2 flex-col h-fit w-full">
+          <button
+            onClick={() =>
+              router.push(`${process.env.NEXT_PUBLIC_APP_DOMAIN}/login`)
+            }
+            className="bg-lighter w-full text-darkest rounded-2xl hover:opacity-80 font-semibold px-8 py-4"
+          >
+            Log in
+          </button>
+          <button
+            onClick={() =>
+              router.push(`${process.env.NEXT_PUBLIC_APP_DOMAIN}/signup`)
+            }
+            className="bg-brand w-full text-darkest rounded-2xl hover:opacity-80 font-semibold px-8 py-4"
+          >
+            Sign up
+          </button>
+        </div>
       </div>
     </motion.div>
   );
