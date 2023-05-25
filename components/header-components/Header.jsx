@@ -1,22 +1,15 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "./Logo";
 
-const Header = () => {
+const Header = ({ handleClick, handleClickScroll }) => {
   const router = useRouter();
 
-  const handleClickScroll = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="w-4/5 h-20 mb-20 justify-between flex items-center">
+    <div className="md:w-4/5 w-full px-4 md:px-0 h-20 mb-20 justify-between flex items-center">
       <Logo />
-      <div className="flex gap-12 flex-1 pl-24">
+      <div className="gap-12 flex-1 pl-24 hidden md:flex">
         <button
           onClick={() => handleClickScroll("features")}
           className="text-gray-500 font-medium hover:text-mid"
@@ -30,7 +23,7 @@ const Header = () => {
           Pricing
         </button>
       </div>
-      <div className="flex gap-6">
+      <div className="gap-6 hidden md:flex">
         <button
           onClick={() =>
             router.push(`${process.env.NEXT_PUBLIC_APP_DOMAIN}/login`)
@@ -48,6 +41,10 @@ const Header = () => {
           Sign up
         </button>
       </div>
+      <AiOutlineMenu
+        className="no-tap-highlight block cursor-pointer text-[1.8rem] text-brand lg:hidden lg:text-[2rem]"
+        onClick={handleClick}
+      />
     </div>
   );
 };
