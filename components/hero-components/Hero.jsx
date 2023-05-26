@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import HeroImg from "../../public/images/heroimg2.png";
+import Link from "next/link";
 
 const Hero = ({ data }) => {
   return (
@@ -13,14 +14,11 @@ const Hero = ({ data }) => {
         <h2 className="text-xl text-center md:text-left font-medium text-slate-500">
           {data[0].sub_heading}
         </h2>
-        <button
-          onClick={() =>
-            router.push(`${process.env.NEXT_PUBLIC_APP_DOMAIN}/signup`)
-          }
-          className="bg-brand text-darkest rounded-2xl hover:opacity-80 font-bold md:w-fit w-4/5 px-8 py-4"
-        >
-          {data[0].cta_button.text}
-        </button>
+        <Link href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/signup`}>
+          <button className="bg-brand text-darkest rounded-2xl hover:opacity-80 font-bold md:w-fit w-4/5 px-8 py-4">
+            {data[0].cta_button.text}
+          </button>
+        </Link>
       </div>
       <div className="md:w-[60%] w-full mt-8 md:mt-0">
         <Image src={HeroImg} alt="retube app screenshots" />
