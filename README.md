@@ -4,6 +4,7 @@ Retube is a full-stack web app that enhances your YouTube experience with AI-pow
 
 This repository houses the landing page for Retube, built with NextJS and TailwindCSS.
 
+![retube](https://github.com/ramoneclarke/retube-landing-page/assets/79229494/9b05cff4-8ee1-45ed-8a7f-d7d8c6adb7b6)
 
 
 ## Demo
