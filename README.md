@@ -17,6 +17,7 @@ Here is a working live demo : [https://retubeai.com](https://retubeai.com)
 - React
 - NextJS
 - TailwindCSS
+- Sanity CMS
 
 ## License
 
