@@ -8,7 +8,7 @@ const Hero = ({ data }) => {
     <div className="h-4/5 md:w-4/5 w-full md:px-0 px-6 flex md:flex-row flex-col mb-32">
       <div className="md:w-[40%] w-full flex flex-col gap-4 items-center md:items-start">
         {" "}
-        <h1 className="lg:text-7xl  md:text-5xl text-center md:text-left text-5xl mt-8 font-bold">
+        <h1 className="lg:text-7xl text-darkest md:text-5xl text-center md:text-left text-5xl mt-8 font-bold">
           {data[0].heading}
         </h1>
         <h2 className="text-xl text-center md:text-left font-medium text-slate-500">
