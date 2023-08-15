@@ -5,8 +5,10 @@ import {
   FaListAlt,
   FaRegHandScissors,
   FaSearchengin,
+  FaTools,
 } from "react-icons/fa";
 import { useClickOutside } from "react-click-outside-hook";
+import { IoPricetagsOutline } from "react-icons/io5";
 import Logo from "./Logo";
 
 const MobileSidebar = ({
@@ -29,7 +31,7 @@ const MobileSidebar = ({
 
   return (
     <motion.div
-      className="absolute left-0 bottom-0 z-10 flex h-full w-2/3 flex-col items-center justify-start bg-lightest pt-2 dark:bg-darkest md:w-2/5 lg:hidden"
+      className="fixed text-darkest left-0 bottom-0 z-10 flex h-screen w-2/3 flex-col items-center justify-start bg-lightest dark:bg-darkest md:w-2/5 lg:hidden"
       initial={{ x: -800 }}
       animate={{
         x: 0,
@@ -41,17 +43,19 @@ const MobileSidebar = ({
       <div className="flex w-full p-4">
         <Logo />
       </div>
-      <div className=" mt-8 flex w-full flex-col items-center gap-y-4">
+      <div className=" mt-8 flex bg-lightest w-full flex-col items-center gap-y-4">
         <button
           onClick={() => handleClickScroll("features")}
-          className="no-tap-highlight justify-left no-tap-highlight flex h-11 w-5/6 cursor-pointer flex-row items-center gap-x-3 rounded-lg bg-lighter pl-3 no-underline shadow-sm  hover:bg-lighter font-medium dark:hover:bg-darker"
+          className="no-tap-highlight justify-left no-tap-highlight flex h-11 w-5/6 cursor-pointer flex-row items-center gap-x-3 rounded-lg pl-3 no-underline  hover:bg-lighter font-medium dark:hover:bg-darker"
         >
+          <FaTools className="text-xl text-brand" />
           Features
         </button>
         <button
           onClick={() => handleClickScroll("pricing")}
-          className="justify-left no-tap-highlight flex h-11 w-5/6 cursor-pointer flex-row items-center gap-x-3 rounded-lg bg-lighter pl-3 no-underline shadow-sm  hover:bg-lighter font-medium dark:hover:bg-darker"
+          className="justify-left no-tap-highlight flex h-11 w-5/6 cursor-pointer flex-row items-center gap-x-3 rounded-lg pl-3 no-underline hover:bg-lighter font-medium dark:hover:bg-darker"
         >
+          <IoPricetagsOutline className="text-xl text-brand" />
           Pricing
         </button>
       </div>
